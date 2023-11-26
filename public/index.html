@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiifi's Chat Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <h3 style="margin: 20px 0;">Fiifi's Chat Application</h3>
+    <div class="chat-window">
+        <div class="name-div">
+            <span><i class="far fa-user"></i></span>
+            <input type="text" name="user" class="name-input" id="nameInputField" value="Anonymous">
+        </div>
+
+        <ul class="message-list" id="messageList" >
+            <!-- <li>
+                <div class="message-left">
+                    <p class="message">hello</p>
+                    <p class="message-time">19 Nov,06:00:00</p>
+                </div>
+            </li>
+            <li>
+                <div class="message-right">
+                    <p class="message">hi</p>
+                    <p class="message-time">19 Nov,07:00:00</p>
+                </div>
+            </li> -->
+        </ul>
+
+        <div class="message-input-div">
+            <input type="text" class="message-input" id="messageInput" >
+            <div class="v-divider"></div>
+            <button class="send-button" id="sendMessageButton">send</button>
+        </div>
+    </div>
+    <p class="clients-total">Total People in chat: <span id="totalClients">0</span></p>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="socket_events.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"
+      integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg=="
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
